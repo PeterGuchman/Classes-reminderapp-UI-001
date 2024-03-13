@@ -1,0 +1,122 @@
+WindowManager:
+    LogIn:
+    HomePage:
+    SignUp:
+    TimeTable:
+    Classes:
+    Exams
+    UserDetails
+
+
+<LogIn>:
+    name: "Login"
+
+    GridLayout:
+        rows: 3
+        cols: 2
+        Label:
+            text: "User Name"
+        TextInput:
+            multiline: False
+        Label:
+            text: "Password"
+        TextInput:
+            multiline: False
+        Button:
+            text: "Log In"
+            on_release: app.root.current = "Home page"
+        Button:
+            text: "Sign Up"
+            on_release: app.root.current = "Sign up"
+
+<HomePage>:
+    name: "Home page"
+    BoxLayout:
+        orientation: "vertical"
+        Label:
+            text: "WELCOME USER"
+            size_hint: 1, 5
+        Button:
+            text: "Check your timetable"
+            on_release: app.root.current = "Timetable"
+        Button:
+            text: "Check/Edit your details"
+            on_release: app.root.current = "User details"
+        Button:
+            text: "QUIT"
+            on_release: app.root.current = "Login"
+
+
+<TimeTable>:
+    name: "Timetable"
+    BoxLayout:
+        orientation: "vertical"
+        Button:
+            text: "My Classes"
+            on_release: app.root.current = "Classes"
+        Button:
+            text: "My Exams"
+            on_release: app.root.current = "Exams"
+        Button:
+            text: "Back"
+            on_release: app.root.current = "Home page"
+
+<Classes>:
+    name: "Classes"
+    GridLayout:
+        Button:
+            text: "Back"
+            on_release: app.root.current = "Timetable"
+
+<Exams>:
+    name: "Exams"
+    GridLayout:
+        Button:
+            text: "Back"
+            on_release: app.root.current = "Timetable"
+
+
+
+
+<UserDetails>:
+    name: "User details"
+    GridLayout:
+        Button:
+            text: "Back"
+            on_release: app.root.current = "Home page"
+
+
+
+<SignUp>:
+    name: "Sign up"
+
+    GridLayout:
+        cols: 1
+        GridLayout:
+            cols: 2
+            Label:
+                text: "Full Name"
+            TextInput:
+                multiline: False
+            Label:
+                text: "Email"
+            TextInput:
+                multiline: False
+            Label:
+                text: "Course"
+            TextInput:
+                multiline: False
+            Label:
+                text: "Position"
+            TextInput:
+                multiline: False
+            Label:
+                text: "Password"
+            TextInput:
+                multiline: False
+        Button:
+            text: "Submit"
+
+
+
+
